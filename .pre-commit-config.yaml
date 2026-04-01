@@ -9,6 +9,6 @@
 repos:
   # Reference the h-hooks repository for validation
   - repo: https://github.com/ldornele/h-hooks
-    rev: c6198015f3aa8ea3432eb44374ab1a1dd1865425  # Using main branch (change to v1.0.0 after tag is created)
+    rev: v1.0.0 
     hooks:
       - id: commitlint
