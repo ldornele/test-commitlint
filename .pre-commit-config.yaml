@@ -1,0 +1,14 @@
+# Pre-commit configuration for test-commitlint
+# Tests the centralized h-hooks commitlint validation
+#
+# Setup:
+#   1. pip install pre-commit
+#   2. npm install
+#   3. pre-commit install --hook-type commit-msg
+
+repos:
+  # Reference the h-hooks repository for validation
+  - repo: https://github.com/ldornele/h-hooks
+    rev: main  # Using main branch (change to v1.0.0 after tag is created)
+    hooks:
+      - id: commitlint

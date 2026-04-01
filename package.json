@@ -1,0 +1,19 @@
+{
+  "name": "test-commitlint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test project for h-hooks commitlint validation",
+  "scripts": {
+    "test:valid": "echo 'HYPERFLEET-001 - feat: test feature' | npx commitlint",
+    "test:invalid": "echo 'feat: Test Invalid' | npx commitlint || true",
+    "test:last-commit": "npx commitlint --from=HEAD~1 --to=HEAD",
+    "test:all": "npm run test:valid && npm run test:invalid"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
